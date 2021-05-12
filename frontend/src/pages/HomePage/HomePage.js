@@ -9,8 +9,6 @@ export default function HomePage() {
     isLoading: buttonLoading
   } = useGet('/api/button', []);
 
-  console.log(button);
-
   return (
     <div className={styles.homePage}>
       <Title/>
