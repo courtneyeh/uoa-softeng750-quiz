@@ -5,8 +5,8 @@ import Title from "./Title/Title";
 export default function HomePage() {
   return (
     <div className={styles.homePage}>
-      <Title />
-      <MainButton />
+      <Title/>
+      <MainButton initialState={true}/>
     </div>
   );
 }
