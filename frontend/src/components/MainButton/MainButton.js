@@ -1,7 +1,7 @@
 import { Button } from "reactstrap";
 import styles from './MainButton.module.css'
 import { useState } from "react";
-import usePut from "../../../hooks/usePut";
+import usePut from "../../hooks/usePut";
 
 export default function MainButton({ initialState }) {
   const put = usePut();

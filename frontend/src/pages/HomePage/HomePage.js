@@ -1,6 +1,6 @@
 import styles from './HomePage.module.css'
-import MainButton from "./MainButton/MainButton";
-import Title from "./Title/Title";
+import MainButton from "./../../components/MainButton/MainButton";
+import Title from "./../../components/Title/Title";
 import useGet from "../../hooks/useGet";
 
 export default function HomePage() {
