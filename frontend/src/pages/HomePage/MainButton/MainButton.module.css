@@ -9,20 +9,18 @@
     font-size: 50px;
     width: 400px;
 
-    display:inline-block;
-    padding:0.35em 1.2em;
+    display: inline-block;
+    padding: 0.35em 1.2em;
     background-color: #72bcd4;
-    border-radius:0.12em;
+    border-radius: 0.12em;
     box-sizing: border-box;
-    text-decoration: none;
-    font-family:'Roboto', sans-serif;
-    font-weight:500;
-    text-align:center;
+    font-weight: 500;
+    text-align: center;
     transition: all 0.2s;
 }
 
-.mainButton:hover{
-    color:#000000;
-    background-color:#c1e1ec;
+.mainButton:hover {
+    color: #000000;
+    background-color: #c1e1ec;
     cursor: pointer;
 }
