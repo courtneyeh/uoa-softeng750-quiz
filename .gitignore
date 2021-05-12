@@ -1,2 +1,4 @@
 # Remove Idea Files
 .idea
+
+**/package-lock.json
