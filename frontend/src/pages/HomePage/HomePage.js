@@ -4,21 +4,17 @@ import Title from "./../../components/Title/Title";
 import useGet from "../../hooks/useGet";
 import Quote from "../../components/Quote/Quote";
 
-const quotes = require('quote-lib');
-
 export default function HomePage() {
   const {
     data: button,
     isLoading: buttonLoading
   } = useGet('/api/button', []);
 
-  const quote = quotes.getRandom();
-
   return (
     <div className={styles.homePage}>
       <Title/>
       {!buttonLoading && <MainButton initialState={button?.pressed}/>}
-      <Quote quote={quote} />
+      <Quote />
     </div>
   );
 }

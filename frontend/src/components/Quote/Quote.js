@@ -1,6 +1,10 @@
 import styles from './Quote.module.css'
 
-export default function Quote({ quote }) {
+const quotes = require('quote-lib');
+
+export default function Quote() {
+  const quote = quotes.getRandom();
+
   return (
     <div className={styles.quoteSection}>
       <b>{quote?.quote}</b>
