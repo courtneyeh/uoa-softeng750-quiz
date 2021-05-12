@@ -18,7 +18,7 @@ export async function retrieveButton() {
 
 export async function updateButton(button) {
   const dbButton = await Button.findOne();
-  const result = await Button.findOneAndUpdate(dbButton._id, button, {
+  const result = await Button.findOneAndUpdate(dbButton?._id, button, {
     new: true,
     useFindAndModify: false,
     upsert: true
