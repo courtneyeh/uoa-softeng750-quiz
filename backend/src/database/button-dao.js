@@ -9,11 +9,8 @@ async function createButton(button) {
 export async function retrieveButton() {
   const button = await Button.findOne();
 
-  console.log('retrieve button');
-  console.log(button);
-
   if (!button) {
-    return await createButton(new Button({ pressed: false }));
+    return await createButton(new Button({ _id: 1, pressed: false }));
   }
 
   return button;
