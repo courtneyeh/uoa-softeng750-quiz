@@ -1,0 +1,12 @@
+.quoteSection {
+    margin: 0;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    padding: 2%;
+    background-color: #c1e1ec;
+    text-align: center;
+}

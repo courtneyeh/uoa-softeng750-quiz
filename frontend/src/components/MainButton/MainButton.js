@@ -11,7 +11,6 @@ export default function MainButton({ initialState }) {
   const handleClick = async () => {
     const newState = !pressed;
     setPressed(newState);
-
     await put(`/api/button`, { pressed: newState });
   }
 
