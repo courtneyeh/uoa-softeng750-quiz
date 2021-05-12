@@ -6,6 +6,7 @@ const Schema = mongoose.Schema;
  * This schema represents the Button state in the database.
  */
 const buttonSchema = new Schema({
+  _id: Number,
   pressed: { type: Boolean, required: true }
 }, { collection: 'buttons' });
 
