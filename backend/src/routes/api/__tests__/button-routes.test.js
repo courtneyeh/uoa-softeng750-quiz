@@ -120,3 +120,16 @@ it('updates a pressed button successfully', async () => {
   dbButton = await buttonColl.findOne({ _id: pressedButton._id });
   expect(dbButton.pressed).toEqual(false);
 })
+
+it('404 when tries update when db has no button', async () => {
+  await mongoose.connection.db.createCollection('buttons');
+
+  // Update button, when none in database
+  try{
+    await axios.put('http://localhost:3000/api/button', { pressed: false });
+    fail('Expected 404 Not Found');
+  } catch (e) {
+    // Check response is 404
+    expect(e.response.status).toBe(404);
+  }
+})

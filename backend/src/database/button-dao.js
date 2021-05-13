@@ -18,11 +18,16 @@ export async function retrieveButton() {
 
 export async function updateButton(button) {
   const dbButton = await Button.findOne();
-  const result = await Button.findOneAndUpdate(dbButton._id, button, {
-    new: true,
-    useFindAndModify: false,
-    upsert: true
-  });
 
-  return result ? true : false;
+  try {
+    const result = await Button.findOneAndUpdate(dbButton._id, button, {
+      new: true,
+      useFindAndModify: false,
+      upsert: true
+    });
+    return result ? true : false;
+
+  } catch (error) {
+    return false;
+  }
 }
