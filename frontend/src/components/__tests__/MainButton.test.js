@@ -1,6 +1,6 @@
 import { render, fireEvent, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import MainButton from '../../pages/HomePage/MainButton/MainButton';
+import MainButton from '../../components/MainButton/MainButton';
 
 const PRESSED_TEXT = 'Pressed';
 const NOT_PRESSED_TEXT = 'Not Pressed';
